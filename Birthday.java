@@ -11,6 +11,7 @@ public class Birthday {
 		
 		do {
 		boolean ageOK = true;
+		boolean correct = false;
 			
 		JOptionPane.showMessageDialog(null, "Welcome to the Toy Company to choose gifts for young children");
 		String name = JOptionPane.showInputDialog("Enter the name of the child");
@@ -19,13 +20,17 @@ public class Birthday {
 		
 		String toyT = JOptionPane.showInputDialog("Choose a toy: a plushie, blocks, or a book");
 		
+				while (correct == false) {
 				if (toyT.equals("plushie") || toyT.equals("blocks")|| toyT.equals("book")) 
 				{
+					correct = true;
 				}
 				else 
 				{
 					JOptionPane.showMessageDialog(null, "Invalid choice\nPlease choose again");
 					toyT = JOptionPane.showInputDialog("Choose a toy: a plushie, blocks, or a book");
+					correct = false;
+				}
 				}
 			
 
